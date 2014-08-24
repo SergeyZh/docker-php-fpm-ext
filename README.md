@@ -6,6 +6,8 @@ Based on docker-centos6-php-fpm + additional PHP libs
 ### Usage
 See https://github.com/SergeyZh/docker-centos6-php-fpm
 
+NOTE: run this container with -h `hostname --fqdn` option to speedup start of sendmail
+
 ### List of php installed PHP modules:
 
 ```
