@@ -9,6 +9,11 @@ RUN sed -i "/^wait/i \/sbin/service sendmail start\n" /run-services.sh
 # To fix bug on Docker Hub. I hope it will be fixed soon
 RUN chmod g+s /usr/sbin/sendmail.sendmail
 
-CMD /run-services.sh
+RUN yum install -y m4 sendmail-cf cyrus-sasl-plain
+
+ADD pre-run.sh /
+RUN chmod a+x /pre-run.sh
+
+CMD /pre-run.sh
 
 EXPOSE 9000
