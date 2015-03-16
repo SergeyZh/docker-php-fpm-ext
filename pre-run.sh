@@ -12,4 +12,8 @@ if [[ ! -z "${SMART_HOST}" ]]; then
     makemap hash access < access
 fi
 
+if [[ ! -z "${APC_OFF}" ]]; then
+    mv -f /etc/php.d/apc.ini /etc/php.d/apc.ini.off
+fi
+
 . /run-services.sh

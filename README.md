@@ -11,6 +11,7 @@ See https://github.com/SergeyZh/docker-centos6-php-fpm
 `SMART_HOST` - SMART_HOST for Sendmail. Optional.
 `SMTP_USER` - user for SMTP auth. Optional.
 `SMTP_PASSWORD` - password for SMTP auth. Optional.
+`APC_OFF` - set to anything to disable php apc.
 
 NOTE: run this container with -h `hostname --fqdn` option to speedup start of sendmail
 
